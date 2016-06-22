@@ -1,0 +1,67 @@
+#diagram {
+  max-width: 1100px;
+}
+
+.group {
+  font-size: 0;
+  position: relative;
+  padding-left: 200px;
+}
+
+.group + .group {
+  margin-top: 10px;
+}
+
+.group > .label {
+  font-size: 24;
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 170px;
+  vertical-align: top;
+  border: 2px solid #ccc;
+  padding: 5px 10px;
+  background: #efefef;
+}
+
+.group .core {
+  font-size: 18;
+  position: absolute;
+  top: 0; right: -180px; bottom: 0;
+  width: 150px;
+  font-weight: bold;
+  padding: 5px 10px;
+  color: #3B4749;
+  background: #efefef;
+  border: 3px solid #3B4749;
+}
+
+div.items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+div.items > div {
+  font-size: 18;
+  vertical-align: top;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  min-width: 80px;
+  max-width: 100px;
+  height: 60px;
+  flex: 1 auto;
+}
+
+div.items > div.col2 {
+  flex: 2 auto;
+  max-width: 200px;
+}
+
+div.items > div.row2 {
+  /*width: 60px;*/
+}
+
+div.items > .dotdotdot {
+  flex: 1 auto;
+  max-width: 1000px;
+}

@@ -1,0 +1,92 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./architecture.css">
+  <script type="text/javascript" src="./architecture.js"></script>
+</head>
+<body>
+  <!--
+    Used classes as abbreviations for some usecases
+    ojs: OJS converting from Word providing a set of standard tools plus a epub bundle
+    ps: ScienceBlogger
+  -->
+  <div id='diagram'>
+    <div class='group platform'>
+      <div class='label'>Platform</div>
+      <div class='items'>
+        <div class='ps er col2'>PubSweet<br>(e.g. ScienceBlogger)</div>
+        <div class='ojs col2'>OJS<br>(e.g. post-conversion fixes)</div>
+        <div class='st'>Stencila</div>
+        <div class='app'>Science Fair</div>
+        <div class="dotdotdot">...</div>
+        <div class='im er'>Custom</div>
+      </div>
+    </div>
+    <div class='group application'>
+      <div class='label'>Components</div>
+      <div class='items'>
+        <div class='app'>Authoring Tool</div>
+        <div class='ojs er'>XML Editor</div>
+        <div class='ams er app span2'>Lens Reader<br></div>
+        <div class='ps ams er app span2'>Mobile Reader</div>
+        <div class='st im'>Custom Reader</div>
+        <div clas='st im'>Custom Editor</div>
+        <div class="dotdotdot">...</div>
+      </div>
+      <div class='core api'>Substance<br>UX patterns</div>
+    </div>
+    <div class='group ui-component'>
+      <div class='label'>UI</div>
+      <div class='items'>
+        <div>Section View</div>
+        <div>Paragraph<br>View</div>
+        <div>Figure View</div>
+        <div>Table View</div>
+        <div>List View</div>
+        <div>Reference<br>Manager</div>
+        <div>Article Meta<br>Panel</div>
+        <div>Custom Meta<br>Panel</div>
+        <div>Custom Node<br>View</div>
+        <div class="dotdotdot col4">...</div>
+      </div>
+      <div class='core api'>Substance UI</div>
+    </div>
+    <div class='group data-model'>
+      <div class='label'>Data Model</div>
+      <div class='items'>
+        <div>Section</div>
+        <div>Paragraph</div>
+        <div>Figure</div>
+        <div>Table</div>
+        <div>List</div>
+        <div>Reference</div>
+        <div>Article Meta</div>
+        <div>Custom Meta</div>
+        <div>Custom Node</div>
+        <div class="dotdotdot">...</div>
+      </div>
+      <div class='core api'>Substance Data</div>
+    </div>
+    <div class='group io'>
+      <div class='label'>IO</div>
+      <div class='items'>
+        <div>JATS Import</div>
+        <div>JATS Export</div>
+        <div>HTML Import</div>
+        <div>HTML Export</div>
+        <div>Custom Import</div>
+        <div class="dotdotdot">...</div>
+      </div>
+      <div class='core api'>Substance XML/HTML</div>
+    </div>
+    <div class='group external'>
+      <div class='label'>External</div>
+      <div class='items'>
+        <div>MS Word to JATS (OJS)</div>
+        <div>Pandoc</div>
+        <div>Custom Content Production</div>
+        <div class="dotdotdot">...</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
