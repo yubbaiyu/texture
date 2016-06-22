@@ -2,6 +2,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="./architecture.css">
   <script type="text/javascript" src="./architecture.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <!--
@@ -9,16 +10,16 @@
     ojs: OJS converting from Word providing a set of standard tools plus a epub bundle
     ps: ScienceBlogger
   -->
-  <div id='diagram'>
+  <div id='diagram' class='ojs disabled'>
     <div class='group platform'>
       <div class='label'>Platform</div>
       <div class='items'>
-        <div class='ps er col2'>PubSweet<br>(e.g. ScienceBlogger)</div>
-        <div class='ojs col2'>OJS<br>(e.g. post-conversion fixes)</div>
+        <div class='ps er col2'>PubSweet</div>
+        <div class='ojs col2'>OJS</div>
         <div class='st'>Stencila</div>
         <div class='app'>Science Fair</div>
+        <div class='app'>AMS</div>
         <div class="dotdotdot">...</div>
-        <div class='im er'>Custom</div>
       </div>
     </div>
     <div class='group application'>
@@ -27,9 +28,9 @@
         <div class='app'>Authoring Tool</div>
         <div class='ojs er'>XML Editor</div>
         <div class='ams er app span2'>Lens Reader<br></div>
-        <div class='ps ams er app span2'>Mobile Reader</div>
-        <div class='st im'>Custom Reader</div>
-        <div clas='st im'>Custom Editor</div>
+        <div class='st im'>Mobile Reader</div>
+        <!-- <div class='ps ams er app span2'>Mobile Reader</div> -->
+        <div clas='st im'>News Editor</div>
         <div class="dotdotdot">...</div>
       </div>
       <div class='core api'>Substance<br>UX patterns</div>
@@ -37,43 +38,43 @@
     <div class='group ui-component'>
       <div class='label'>UI</div>
       <div class='items'>
-        <div>Section View</div>
-        <div>Paragraph<br>View</div>
-        <div>Figure View</div>
-        <div>Table View</div>
-        <div>List View</div>
-        <div>Reference<br>Manager</div>
-        <div>Article Meta<br>Panel</div>
-        <div>Custom Meta<br>Panel</div>
-        <div>Custom Node<br>View</div>
-        <div class="dotdotdot col4">...</div>
+        <div class="ojs">Section View</div>
+        <div class="ojs">Paragraph<br>View</div>
+        <div class="ojs">Figure View</div>
+        <!-- <div>Table View</div>
+        <div>List View</div> -->
+        <div class="ojs">Reference<br>Manager</div>
+        <div class="ojs">Article Meta<br>Panel</div>
+<!--         <div>Custom Meta<br>Panel</div>
+        <div>Custom Node<br>View</div> -->
+        <div class="ojs dotdotdot">...</div>
       </div>
       <div class='core api'>Substance UI</div>
     </div>
     <div class='group data-model'>
       <div class='label'>Data Model</div>
       <div class='items'>
-        <div>Section</div>
-        <div>Paragraph</div>
-        <div>Figure</div>
-        <div>Table</div>
-        <div>List</div>
-        <div>Reference</div>
-        <div>Article Meta</div>
-        <div>Custom Meta</div>
-        <div>Custom Node</div>
-        <div class="dotdotdot">...</div>
+        <div class="ojs">Section</div>
+        <div class="ojs">Paragraph</div>
+        <div class="ojs">Figure</div>
+        <!-- <div>Table</div> -->
+        <!-- <div>List</div> -->
+        <div class="ojs">Reference</div>
+        <div class="ojs">Article Meta</div>
+        <!-- <div>Custom Meta</div>
+        <div>Custom Node</div> -->
+        <div class="ojs dotdotdot">...</div>
       </div>
       <div class='core api'>Substance Data</div>
     </div>
     <div class='group io'>
       <div class='label'>IO</div>
       <div class='items'>
-        <div>JATS Import</div>
-        <div>JATS Export</div>
-        <div>HTML Import</div>
-        <div>HTML Export</div>
-        <div>Custom Import</div>
+        <div class="ojs">JATS Import</div>
+        <div class="ojs">JATS Export</div>
+        <div>HTML Im-/Export</div>
+        <div>TEI Im-/Export</div>
+        <div>NewsML Im-/Export</div>
         <div class="dotdotdot">...</div>
       </div>
       <div class='core api'>Substance XML/HTML</div>
@@ -81,9 +82,11 @@
     <div class='group external'>
       <div class='label'>External</div>
       <div class='items'>
-        <div>MS Word to JATS (OJS)</div>
+        <div class="ojs">MS Word to JATS (OJS)</div>
+        <div>INK</div>
         <div>Pandoc</div>
-        <div>Custom Content Production</div>
+        <div>Latex to JATS</div>
+        <div>Web Scraper</div>
         <div class="dotdotdot">...</div>
       </div>
     </div>
