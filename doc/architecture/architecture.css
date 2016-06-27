@@ -81,13 +81,58 @@ div.items > .dotdotdot {
 
 /* Colors */
 
-.disabled .items > div {
-  opacity: 0.5;
+.exclusive .items > div {
+  opacity: 0.3;
 }
 
-.ojs .items > div.ojs, .er .items > div.er, .ams .items > div.ams, .sf .items > div.sf, .ps .items > div.ps {
+.ps .items > div.ps,
+.ojs .items > div.ojs,
+.er .items > div.er,
+.ams .items > div.ams,
+.sf .items > div.sf,
+.st .items > div.st
+{
   opacity: 1.0;
   background: #9af19a;
   color: rgba(0,0,0,0.7);
 }
 
+.items #ps-reader {
+  display: none;
+}
+
+.ps .items #ps-reader {
+  display: initial;
+}
+
+.items #news-editor {
+  display: none;
+}
+
+.im .items #news-editor {
+  display: initial;
+}
+
+.items #custom-reader {
+  display: none;
+}
+
+.custom-reader .items #custom-reader {
+  display: initial;
+}
+
+
+.items #stencil-writer,
+.items #sheet-writer {
+  display: none;
+}
+
+.st .items #stencil-writer,
+.st .items #sheet-writer {
+  display: initial;
+}
+
+.st .items #mobile-reader,
+.st .items #custom-reader {
+  display: none;
+}
