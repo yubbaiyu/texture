@@ -38,6 +38,7 @@ function buildExample(example) {
 b.task('author', ['clean', 'substance', 'assets'], buildExample('author'))
 b.task('publisher', ['clean', 'substance', 'assets'], buildExample('publisher'))
 b.task('tagging', ['author'], buildExample('tagging'))
+b.task('tasks', ['author'], buildExample('tasks'))
 
 b.task('examples', ['author', 'publisher', 'tagging'])
 

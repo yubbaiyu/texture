@@ -1,0 +1,48 @@
+.sc-tasks-panel {
+  background: #efefef;
+}
+
+.sc-tasks-panel .se-header {
+  padding: 0px 10px;
+  font-size: x-large;
+  height: 41px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sc-tasks-panel .se-body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+}
+
+.sc-tasks-panel .se-body .se-task {
+  position: relative;
+  margin: 10px 5px;
+  min-height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.sc-tasks-panel .se-body .se-task > .se-title {
+  display: inline-block;
+}
+
+.sc-tasks-panel .se-body .se-task ul {
+  list-style-type: none;
+}
+
+.sc-tasks-panel .se-body .se-task .se-show-resources {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+#content-scrollbar .se-highlight.sm-task {
+  background-color: red;
+}
+
+.sc-author .se-main-section .sm-task-highlighted {
+  outline: 2px solid red;
+}

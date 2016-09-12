@@ -7,7 +7,8 @@ function RefComponent() {
 
 RefComponent.Prototype = function() {
   this.render = function($$) {
-    var el = $$('div').addClass('sc-ref');
+    var node = this.props.node
+    var el = $$('div').addClass('sc-ref').attr('data-id', node.id);
     el.html(refToHTML(this.props.node));
     return el;
   };
