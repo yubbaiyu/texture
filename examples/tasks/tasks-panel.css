@@ -40,9 +40,9 @@
 }
 
 #content-scrollbar .se-highlight.sm-task {
-  background-color: red;
+  background-color: #ff924f;
 }
 
 .sc-author .se-main-section .sm-task-highlighted {
-  outline: 2px solid red;
+  outline: 2px solid #ff924f;
 }

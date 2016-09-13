@@ -3,7 +3,7 @@ export default [
     id: 't1',
     title: 'Fix broken links',
     items: [
-      { id: 'i1', description: 'Should link to Figure 2+3', done: false, resources: ['xref-79'] },
+      { id: 'i1', description: 'Should link to Figure 1+2', done: false, resources: ['xref-79'] },
       { id: 'i2', description: 'Should link to Figure 1-3', done: false, resources: ['xref-99'] },
     ]
   },
