@@ -87,9 +87,9 @@ export default class Texture extends Component {
   }
 
   _loadDocument() {
+    console.info('Loading document', this.props.documentId)
     const configurator = this.getConfigurator()
     this.props.readXML(this.props.documentId, function(err, xmlStr) {
-      let dom = DefaultDOMElement.parseXML(xmlStr)
       if (err) {
         console.error(err)
         this.setState({
@@ -97,8 +97,12 @@ export default class Texture extends Component {
         })
         return
       }
+      console.info('.. received XML', xmlStr)
+      let dom = DefaultDOMElement.parseXML(xmlStr)
       const doctype = dom.getDoctype()
       if (doctype.publicId !== 'TextureJATS 1.1') {
+        console.info('.. seems to be a JATS file')
+        console.info('Starting importer...')
         dom = this.jatsImporter.import(dom)
         if (this.jatsImporter.hasErrored()) {
           console.error('Could not transform to TextureJATS')
@@ -107,11 +111,18 @@ export default class Texture extends Component {
           })
           return
         }
+      } else {
+        // TODO: we should still validate TextureJATS
+        console.info('.. it is TextureJATS (no conversion will be applied)')
       }
+
+      console.info('.. we should be fine now.')
       const importer = configurator.createImporter('texture-jats')
       const doc = importer.importDocument(dom)
 
       window.doc = doc
+
+      console.info('Starting Editor session ...')
       // create editor session
       const editorSession = new EditorSession(doc, {
         configurator: configurator
